@@ -1,0 +1,19 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "standard"
+    ],
+    "rules": {
+        "prefer-const": ["error", {
+            "destructuring": "all",
+            "ignoreReadBeforeAssign": true
+        }],
+        "prefer-arrow-callback": "error",
+        "no-var": "error",
+        "semi": ["error", "always"],
+        "space-before-function-paren": ["error", "never"]
+    }
+}

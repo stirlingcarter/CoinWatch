@@ -8,7 +8,7 @@ const extractSASS = new ExtractTextPlugin('[name].css');
 
 module.exports = {
     entry: {
-        
+        site: './public/javascripts/site.js',
     },
     output: {
         filename: '[name].js',
@@ -35,7 +35,8 @@ module.exports = {
                 use: extractSASS.extract({
                     fallback: 'style-loader',
                     //resolve-url-loader may be chained before sass-loader if necessary
-                    use: ['css-loader', 'sass-loader']
+                    // use: ['css-loader', 'sass-loader']
+                    use: ['style-loader', 'css-loader', 'sass-loader']
                 })
             },
             {
@@ -48,9 +49,9 @@ module.exports = {
             },            
             {
                 enforce: 'pre',
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                loader: 'jshint-loader'
+                loader: 'eslint-loader'
             }
         ]
     },
