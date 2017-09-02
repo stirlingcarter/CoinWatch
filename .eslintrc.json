@@ -6,6 +6,9 @@
     "extends": [
         "standard"
     ],
+    "plugins": [
+        "react"
+    ],
     "rules": {
         "prefer-const": ["error", {
             "destructuring": "all",
