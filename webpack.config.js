@@ -9,7 +9,7 @@ const extractSASS = new ExtractTextPlugin('[name].css');
 module.exports = {
     entry: {
         site: './public/javascripts/site.js',
-        style: './public/stylesheets/style.scss'
+        style: ['./public/stylesheets/dependencies.scss', './public/stylesheets/style.scss']
     },
     output: {
         filename: '[name].js',
