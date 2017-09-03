@@ -1,51 +1,31 @@
 import React, {Component} from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
-
-export default class Post extends Component {
+class Post extends Component {
 
   render() {
+    const posts = [];
+
     return (
-      <div className = "header">
-        <Navbar color="faded" light toggleable>
-          <NavbarToggler right onClick={this.toggle} />
-          <NavbarBrand href="/">CoinStream</NavbarBrand>
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/components/">Components</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
+      <div className="">
+        <Navbar />
+        <ul>
+          {posts}
+        </ul>
       </div>
     );
   }
 }
 
-export default class PostList extends Component {
-
+class PostList extends Component {
   render() {
     return (
-      <div className = "header">
-        <Navbar color="faded" light toggleable>
-          <NavbarToggler right onClick={this.toggle} />
-          <NavbarBrand href="/">CoinStream</NavbarBrand>
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/components/">Components</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
+      <li></li>
     );
   }
 }
+
+export {
+  Post,
+  PostList
+};
