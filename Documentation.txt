@@ -3,3 +3,5 @@ tying together with webpack
 install react dependencies
 eslint
 sass
+
+index.js -> index.js calls index.pug -> calls site.js -> 

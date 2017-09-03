@@ -14769,26 +14769,30 @@ var _main = __webpack_require__(207);
 
 var _main2 = _interopRequireDefault(_main);
 
+var _posts = __webpack_require__(216);
+
+var _posts2 = _interopRequireDefault(_posts);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import store from './redux/Store';
 
 /*      Search Bar       */
-
-// import { Provider } from 'react-redux';
-
-// Store + React components
-// React/Redux
 (0, _reactDom.render)(
 //   <Provider store={store}>
 _react2.default.createElement(
   'div',
   null,
   _react2.default.createElement(_header2.default, null),
-  _react2.default.createElement(_main2.default, null)
+  _react2.default.createElement(_main2.default, null),
+  _react2.default.createElement(Post, null)
 ),
 //   </Provider>,
 document.getElementById('root'));
+// import { Provider } from 'react-redux';
+
+// Store + React components
+// React/Redux
 
 /***/ }),
 /* 90 */
@@ -30052,6 +30056,94 @@ var Main = function (_Component) {
 }(_react.Component);
 
 exports.default = Main;
+
+/***/ }),
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.PostList = exports.Post = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(12);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactstrap = __webpack_require__(85);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Post = function (_Component) {
+  _inherits(Post, _Component);
+
+  function Post() {
+    _classCallCheck(this, Post);
+
+    return _possibleConstructorReturn(this, (Post.__proto__ || Object.getPrototypeOf(Post)).apply(this, arguments));
+  }
+
+  _createClass(Post, [{
+    key: 'render',
+    value: function render() {
+      var posts = [];
+
+      return _react2.default.createElement(
+        'div',
+        { className: '' },
+        _react2.default.createElement(_reactstrap.Navbar, null),
+        _react2.default.createElement(
+          'ul',
+          null,
+          posts
+        )
+      );
+    }
+  }]);
+
+  return Post;
+}(_react.Component);
+
+var PostList = function (_Component2) {
+  _inherits(PostList, _Component2);
+
+  function PostList() {
+    _classCallCheck(this, PostList);
+
+    return _possibleConstructorReturn(this, (PostList.__proto__ || Object.getPrototypeOf(PostList)).apply(this, arguments));
+  }
+
+  _createClass(PostList, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement('li', null);
+    }
+  }]);
+
+  return PostList;
+}(_react.Component);
+
+exports.Post = Post;
+exports.PostList = PostList;
 
 /***/ })
 /******/ ]);
