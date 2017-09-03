@@ -2,3 +2,4 @@ node, yarn, set up with express
 tying together with webpack
 install react dependencies
 eslint
+sass

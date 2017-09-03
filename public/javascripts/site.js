@@ -14,6 +14,7 @@ render(
   <div>
     <Header />
     <Main />
+    
   </div>,
   //   </Provider>,
   document.getElementById('root')

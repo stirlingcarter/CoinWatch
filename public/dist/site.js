@@ -26940,7 +26940,7 @@ var Header = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'header' },
         _react2.default.createElement(
           _reactstrap.Navbar,
           { color: 'faded', light: true, toggleable: true },
@@ -26948,7 +26948,7 @@ var Header = function (_Component) {
           _react2.default.createElement(
             _reactstrap.NavbarBrand,
             { href: '/' },
-            'reactstrap'
+            'CoinStream'
           ),
           _react2.default.createElement(
             _reactstrap.Collapse,
