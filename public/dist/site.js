@@ -30024,6 +30024,8 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactstrap = __webpack_require__(85);
 
+var _posts = __webpack_require__(217);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -30044,7 +30046,11 @@ var Main = function (_Component) {
   _createClass(Main, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', null);
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_posts.Post, null)
+      );
     }
   }]);
 
@@ -30052,6 +30058,122 @@ var Main = function (_Component) {
 }(_react.Component);
 
 exports.default = Main;
+
+/***/ }),
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.PostList = exports.Post = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(12);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactstrap = __webpack_require__(85);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PostList = function (_Component) {
+  _inherits(PostList, _Component);
+
+  function PostList() {
+    _classCallCheck(this, PostList);
+
+    return _possibleConstructorReturn(this, (PostList.__proto__ || Object.getPrototypeOf(PostList)).apply(this, arguments));
+  }
+
+  _createClass(PostList, [{
+    key: 'render',
+    value: function render() {
+
+      var posts = postsinfo.map(function (postinfo) {
+        return _react2.default.createElement(Post, { info: postinfo });
+      });
+      // const posts = [<Post info={postinfo} />];
+
+      return _react2.default.createElement(
+        'div',
+        { className: '' },
+        _react2.default.createElement(_reactstrap.Navbar, null),
+        _react2.default.createElement(
+          'ul',
+          null,
+          posts
+        )
+      );
+    }
+  }]);
+
+  return PostList;
+}(_react.Component);
+
+var Post = function (_Component2) {
+  _inherits(Post, _Component2);
+
+  function Post() {
+    _classCallCheck(this, Post);
+
+    return _possibleConstructorReturn(this, (Post.__proto__ || Object.getPrototypeOf(Post)).apply(this, arguments));
+  }
+
+  _createClass(Post, [{
+    key: 'render',
+    value: function render() {
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'post' },
+        _react2.default.createElement(
+          _reactstrap.Card,
+          { block: true, inverse: true, style: { backgroundColor: '#333', borderColor: '#333' } },
+          _react2.default.createElement(
+            _reactstrap.CardTitle,
+            null,
+            'Special Title Treatment'
+          ),
+          _react2.default.createElement(
+            _reactstrap.CardText,
+            null,
+            'With supporting text below as a natural lead-in to additional content.'
+          ),
+          _react2.default.createElement(
+            _reactstrap.Button,
+            null,
+            'Button'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Post;
+}(_react.Component);
+
+exports.Post = Post;
+exports.PostList = PostList;
 
 /***/ })
 /******/ ]);

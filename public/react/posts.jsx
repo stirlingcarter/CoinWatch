@@ -1,29 +1,43 @@
 import React, {Component} from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Card, CardImg, CardText, CardBlock,
+  CardTitle, CardSubtitle, Button, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
-class Post extends Component {
+class PostList extends Component {
 
   render() {
-    const posts = [];
+
+    const posts = postsinfo.map( (postinfo) => {
+      return <Post info={postinfo} />;
+    });
+    // const posts = [<Post info={postinfo} />];
 
     return (
       <div className="">
         <Navbar />
         <ul>
           {posts}
+
         </ul>
       </div>
     );
   }
 }
 
-class PostList extends Component {
-  render() {
-    return (
-      <li></li>
-    );
+class Post extends Component {
+  
+    render() {
+
+      return (
+        <div className="post">
+          <Card block inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+          <CardTitle>Special Title Treatment</CardTitle>
+          <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+          <Button>Button</Button>
+          </Card>
+        </div>
+      );
+    }
   }
-}
 
 export {
   Post,

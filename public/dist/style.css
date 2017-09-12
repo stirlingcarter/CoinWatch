@@ -9326,3 +9326,6 @@ a {
 .header {
   padding-left: 0;
   padding-right: 0; }
+
+.post {
+  padding: 30px; }
