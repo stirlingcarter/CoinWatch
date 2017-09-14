@@ -44,5 +44,5 @@ app.use(function(err, req, res, next) {
 });
 
 require('./db');
-require('./bookshelf');
+// require('./bookshelf');
 module.exports = app;
