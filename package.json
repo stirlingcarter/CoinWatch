@@ -22,7 +22,8 @@
     "react-addons-transition-group": "^15.6.0",
     "react-dom": "^15.6.1",
     "reactstrap": "^4.8.0",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "twitter-scraper": "^5.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
